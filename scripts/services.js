@@ -98,7 +98,7 @@ function addMovieHomePage(list, idContainer){
 }
 
 function getDetailsMovie(id){
-   var url = `https://api.themoviedb.org/3/movie/${id}?api_key=b1bf171c0c0b4c218bbfdc19490dead7&language=en-US`
+   var url = `https://api.themoviedb.org/3/movie/${id}?api_key=b1bf171c0c0b4c218bbfdc19490dead7&language=en-US&append_to_response=videos`
 
    fetch(url)
    .then((resp) => resp.json())

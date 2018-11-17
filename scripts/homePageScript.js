@@ -14,6 +14,13 @@
     movieTitle.getElementsByTagName("span")[0].innerText = "("+releaseYear+")";
 
     document.getElementById("synopsis").innerText = details.overview;
+    if(details.videos.results.length>0){
+      document.getElementById("overlayTrailer").getElementsByTagName("iframe")[0].src = "https://www.youtube.com/embed/"+details.videos.results[details.videos.results.length-1].key;
+    }else{
+      document.getElementById("overlayTrailer").getElementsByTagName("iframe")[0].src = "";
+    }
+
+
   }
 
 

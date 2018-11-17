@@ -10,7 +10,7 @@
       <div id="movieDetails" class="overlay">
         <a href="javascript:void(0)" class="closebtn" onclick="closeDetails()">&times;</a>
         <div class="overlay-content">
-          <div id="detailsHeader">
+          <div id="detailsHeader" class="overlayCards">
             <div id="divDetailsPoster">
               <img id="detailsPoster" src="" alt="movie's poster">
             </div>
@@ -19,7 +19,16 @@
               <p id="synopsis"></p>
             </div>
           </div>
-          <iframe width="560" height="315" src="" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <div class="overlaySeparator"></div>
+          <div id="cast" class="overlayCards">
+            <h2>CAST</h2>
+            <div id="castContainer">
+            </div>
+          </div>
+          <div class="overlaySeparator"></div>
+          <div id=overlayTrailer class="overlayCards">
+              <iframe width="560" height="315" src="" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
         </div>
       </div>
       <header>

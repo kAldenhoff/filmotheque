@@ -167,6 +167,17 @@ header {
   color: #f1f1f1;
 }
 
+.overlaySeparator {
+  width: 75%;
+  margin: 0 auto;
+  border-bottom: 1px solid #004ffc;
+  margin-bottom: 25px;
+}
+
+.overlayCards {
+  margin-bottom: 25px;
+}
+
 #detailsHeader {
   display: flex;
   justify-content: space-between;
@@ -178,6 +189,7 @@ header {
 
 #movieInfos {
   width: 50%;
+  margin-bottom: 25px;
 }
 
 #movieInfos h1, h2 {
@@ -186,7 +198,12 @@ header {
 }
 
 #movieInfos h1 {
-  margin-bottom: 50px;
+  margin-bottom: 30px;
+}
+
+#movieInfos h2 {
+  font-weight: lighter;
+  font-size: 22px;
 }
 
 #movieInfos h1 span{
@@ -197,4 +214,12 @@ header {
 #movieInfos p{
   font-family: 'Comfortaa', cursive;
   line-height: 25px;
+}
+
+#overlayTrailer {
+  text-align: center;
+}
+
+#castContainer {
+  
 }
