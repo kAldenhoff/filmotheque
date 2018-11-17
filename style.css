@@ -1,0 +1,115 @@
+ * {
+   margin: 0;
+   padding: 0;
+ }
+
+body{
+  height: 100vh;
+  background-color: #00000F;
+}
+.moviesContainer {
+  display: flex;
+  flex-wrap: nowrap;
+  margin-top: 5px;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  -ms-overflow-style: none; // IE 10+
+  overflow: -moz-scrollbars-none; // Firefox
+}
+
+.moviesContainer::-webkit-scrollbar {
+display: none; // Safari and Chrome
+}
+
+.containerHome{
+  margin-top: 7px;
+  margin-bottom: 7px;
+}
+
+.containerHome h2{
+  margin-bottom: 10px;
+  margin-left: 15px;
+  color: white;
+  font-family: 'Montserrat', sans-serif;
+}
+
+header {
+  position: sticky;
+  height: 50px;
+  top:0px;
+  background-color: #2D2D37;
+  align-items: center;
+  z-index: 1;
+}
+
+#navBar {
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding-left: 100px;
+  padding-right: 100px;
+  align-items: center;
+}
+
+#menu {
+  display: flex;
+  list-style-type: none;
+  color:white;
+  font-family: 'Comfortaa', cursive;
+  height: 100%;
+  align-items: center;
+}
+
+#menu li {
+  margin-left: 40px;
+  padding-bottom: 5px;
+}
+
+#menu li:hover{
+  border-bottom: 1px solid #004ffc;
+  color: #004ffc;
+}
+
+#searchBar{
+  width: 30%;
+  background-color: white;
+  height: 55%;
+  border-radius: 25px;
+}
+
+#searchInput {
+  font-family: 'Comfortaa', cursive;
+  font-size: 18px;
+  width: 90%;
+  height: 100%;
+  padding-left: 10px;
+  background: transparent;
+  border: none;
+  outline: none;
+}
+
+.movieTitle {
+  text-align: center;
+  font-family: 'Comfortaa', cursive;
+  margin-top: 15px;
+}
+
+.divMoviePoster {
+  margin: 5px;
+  color: white;
+}
+
+.divMoviePoster figure{
+  overflow:hidden;
+}
+
+.divMoviePoster figure img {
+	-webkit-transform: scale(1);
+	transform: scale(1);
+	-webkit-transition: .3s ease-in-out;
+	transition: .3s ease-in-out;
+}
+.divMoviePoster figure:hover img {
+	-webkit-transform: scale(1.2);
+	transform: scale(1.2);
+}
