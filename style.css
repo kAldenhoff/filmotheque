@@ -7,6 +7,7 @@ body{
   height: 100vh;
   background-color: #00000F;
 }
+
 .moviesContainer {
   display: flex;
   flex-wrap: nowrap;
@@ -122,6 +123,15 @@ header {
     z-index: 2; /* Sit on top */
     left: 0;
     top: 0;
+/*
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0, 0.9);
+    */
+    background-image:linear-gradient(rgba(0, 0, 0, 0.9),rgba(0, 0, 0, 0.9)),
+                        url("");
+
+    background-size: cover;
+    background-repeat: no-repeat;
     background-color: rgb(0,0,0); /* Black fallback color */
     background-color: rgba(0,0,0, 0.9); /* Black w/opacity */
     overflow-x: hidden; /* Disable horizontal scroll */
@@ -135,7 +145,9 @@ header {
     width: 60%; /* 100% width */
     margin-top: 30px; /* 30px top margin to avoid conflict with the close button on smaller screens */
     margin-left: -30%;
+    color:white;
 }
+
 
 
 /* Position the close button (top right corner) */
@@ -168,12 +180,21 @@ header {
   width: 50%;
 }
 
-#movieInfos h1 {
+#movieInfos h1, h2 {
   color: white;
   font-family: 'Montserrat', sans-serif;
+}
+
+#movieInfos h1 {
+  margin-bottom: 50px;
 }
 
 #movieInfos h1 span{
   color: hsl(214, 7%, 40%);
   font-weight: lighter;
+}
+
+#movieInfos p{
+  font-family: 'Comfortaa', cursive;
+  line-height: 25px;
 }
