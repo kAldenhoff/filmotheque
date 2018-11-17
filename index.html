@@ -7,6 +7,20 @@
         <link href="https://fonts.googleapis.com/css?family=Montserrat|Comfortaa" rel="stylesheet"><link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
     </head>
     <body>
+      <div id="movieDetails" class="overlay">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeDetails()">&times;</a>
+        <div class="overlay-content">
+          <div id="detailsHeader">
+            <div id="divDetailsPoster">
+              <img id="detailsPoster" src="" alt="movie's poster">
+            </div>
+            <div id="movieInfos">
+              <h1><span></span></h1>
+            </div>
+          </div>
+          <iframe width="560" height="315" src="" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+      </div>
       <header>
         <div id="navBar">
           <div id="searchBar">
@@ -33,7 +47,6 @@
         <div class="moviesContainer" id="popularity">
         </div>
       </div>
-
       <script src="scripts/services.js" type="text/javascript"></script>
       <script src="scripts/homePageScript.js" type="text/javascript"></script>
     </body>

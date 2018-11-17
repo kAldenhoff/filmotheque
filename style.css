@@ -40,6 +40,7 @@ header {
   background-color: #2D2D37;
   align-items: center;
   z-index: 1;
+  border-top: 4px solid #004ffc;
 }
 
 #navBar {
@@ -112,4 +113,67 @@ header {
 .divMoviePoster figure:hover img {
 	-webkit-transform: scale(1.2);
 	transform: scale(1.2);
+}
+
+.overlay {
+    height: 0%;
+    width: 100%;
+    position: fixed; /* Stay in place */
+    z-index: 2; /* Sit on top */
+    left: 0;
+    top: 0;
+    background-color: rgb(0,0,0); /* Black fallback color */
+    background-color: rgba(0,0,0, 0.9); /* Black w/opacity */
+    overflow-x: hidden; /* Disable horizontal scroll */
+    transition: 0.5s; /* 0.5 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
+}
+
+.overlay-content {
+    position: relative;
+    top: 10%; /* 25% from the top */
+    left:50%;
+    width: 60%; /* 100% width */
+    margin-top: 30px; /* 30px top margin to avoid conflict with the close button on smaller screens */
+    margin-left: -30%;
+}
+
+
+/* Position the close button (top right corner) */
+.overlay .closebtn {
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 60px;
+    padding: 8px;
+    text-decoration: none;
+    color: #818181;
+    display: block; /* Display block instead of inline */
+    transition: 0.3s; /* Transition effects on hover (color) */
+}
+
+.overlay .closebtn:hover {
+  color: #f1f1f1;
+}
+
+#detailsHeader {
+  display: flex;
+  justify-content: space-between;
+}
+
+#detailsPoster {
+  width: 300px;
+}
+
+#movieInfos {
+  width: 50%;
+}
+
+#movieInfos h1 {
+  color: white;
+  font-family: 'Montserrat', sans-serif;
+}
+
+#movieInfos h1 span{
+  color: hsl(214, 7%, 40%);
+  font-weight: lighter;
 }

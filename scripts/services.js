@@ -76,6 +76,7 @@ function addMovieHomePage(list, idContainer){
     img.style.width = "185px";
     // Ajout de l'image dans la page
     div.setAttribute("class","divMoviePoster");
+    div.setAttribute("data-id",movie.id);
     figure.appendChild(img);
     div.appendChild(figure);
     div.appendChild(title);
@@ -88,6 +89,20 @@ function addMovieHomePage(list, idContainer){
       div.style.borderBottom = "none";
     })
 
+    div.addEventListener("click",function(){
+      openDetails(div.getAttribute("data-id"));
+    })
+
     document.getElementById(idContainer).appendChild(div);
   })
+}
+
+function getDetailsMovie(id){
+   var url = `https://api.themoviedb.org/3/movie/${id}?api_key=b1bf171c0c0b4c218bbfdc19490dead7&language=en-US`
+
+   fetch(url)
+   .then((resp) => resp.json())
+     .then(function(data){
+       displayDetails(data);
+     })
 }
