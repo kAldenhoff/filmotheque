@@ -23,10 +23,19 @@
 
   }
 
+  function displayCast(cast){
+    var i=0;
+    document.querySelectorAll(".castContent").forEach(function(actor){
+      actor.getElementsByTagName("img")[0].src = `https://image.tmdb.org/t/p/w185/${cast[i].profile_path}`;
+      i++;
+    })
+  }
+
 
   function openDetails(id) {
       document.getElementById("movieDetails").style.height = "100%";
       getDetailsMovie(id);
+      getCast(id);
   }
 
   /* Close when someone clicks on the "x" symbol inside the overlay */

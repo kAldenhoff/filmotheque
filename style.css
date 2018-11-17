@@ -221,5 +221,13 @@ header {
 }
 
 #castContainer {
-  
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 0 auto;
+  width: 75%;
+}
+
+#castContent {
+
 }

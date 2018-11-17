@@ -106,3 +106,12 @@ function getDetailsMovie(id){
        displayDetails(data);
      })
 }
+
+function getCast(id){
+  var url = `https://api.themoviedb.org/3/movie/${id}/credits?api_key=b1bf171c0c0b4c218bbfdc19490dead7`;
+  fetch(url)
+  .then((resp) => resp.json())
+    .then(function(data){
+      displayCast(data.cast);
+    })
+}
