@@ -24,11 +24,43 @@
   }
 
   function displayCast(cast){
+    while (document.getElementById("castContainer").firstChild) {
+        document.getElementById("castContainer").removeChild(document.getElementById("castContainer").firstChild);
+    }
+
+    for(var i = 0; cast.length>6 ? i <6 : i<cast.length;i++){
+      var div = document.createElement("div");
+      div.setAttribute("class","castContent");
+      var profile = document.createElement('img');
+      if(cast[i].profile_path){
+        profile.src = `https://image.tmdb.org/t/p/w185/${cast[i].profile_path}`;
+      }else{
+          profile.src = "assets/images/noPoster.png";
+      }
+
+      var actorName = document.createElement("p");
+      actorName.setAttribute("class","actorName");
+      actorName.innerText = cast[i].name;
+
+      var characterName = document.createElement("p");
+      characterName.setAttribute("class","characterName");
+      characterName.innerText = cast[i].character;
+
+      div.appendChild(profile);
+      div.appendChild(actorName);
+      div.appendChild(characterName);
+
+      document.getElementById("castContainer").appendChild(div);
+
+    }
+
+    /*
     var i=0;
     document.querySelectorAll(".castContent").forEach(function(actor){
       actor.getElementsByTagName("img")[0].src = `https://image.tmdb.org/t/p/w185/${cast[i].profile_path}`;
       i++;
     })
+    */
   }
 
 
